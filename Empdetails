@@ -1,0 +1,72 @@
+package extra;
+import java.util.*;
+
+public class Extra6 
+{
+	public int yr;
+	public String ad;
+	public String name1;
+	
+	
+		Extra6(int yr, String name1, String ad)
+		{	
+			this.ad=ad;
+			this.name1=name1;
+			this.yr=yr;
+		}
+		
+		public void display()
+		{	
+			System.out.println(name1+" \t"+ yr +" \t \t" + ad);
+
+			
+		}
+	
+		public static void main(String[] args)
+		{
+			
+			Scanner sc= new Scanner(System.in);
+			System.out.println("Enter Number of Employees:");
+			int n = sc.nextInt();
+			String name1;
+			int yr;
+			String ad;
+			Extra6[] e = new Extra6[5];
+			for(int i=0;i<n;i++)
+			{ 
+				System.out.println("Enter Details of Employee"+i+1+":");
+				
+				System.out.println("Enter Name:");
+				name1=sc.next();
+				
+				System.out.println("Enter Year Of Joining:");
+				yr= sc.nextInt();
+				
+				System.out.println("Enter Address:");
+				ad=sc.next();
+				
+				e[i]= new Extra6(yr, name1, ad);
+				
+				}
+			System.out.println("Name \tYearOfJoining \tAddress");
+			for(int i=0;i<n;i++)
+			{
+				
+				e[i].display();
+			}
+		
+			
+		
+			
+			
+		}
+		
+	
+    } 
+
+	
+	
+	
+
+
+
